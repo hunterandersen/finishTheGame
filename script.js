@@ -18,6 +18,11 @@ const hangmanWords = [
 ];
 
 class HangManWord {
+    /**
+     * 
+     * @param {string} word The player attempts to guess this word to win the game
+     * @param {number} totalAttemptsCount How many times the player can guess before losing the game
+     */
     constructor(word, totalAttemptsCount){
         this.word = word.toUpperCase();
         this.totalAttempts = totalAttemptsCount;
@@ -26,6 +31,11 @@ class HangManWord {
         this.triedLetters = [];
     }
 
+    /**
+     * 
+     * @param {string} letterToTest The letter to check against the winning word. It tracks if the letter has been tried already.
+     * @returns -1 if the letter has been tried previously, true if the letter is new and works in the word, false if the letter does not work in the word
+     */
     testLetter(letterToTest){
         const letter = letterToTest.toUpperCase();
         if (this.triedLetters.includes(letter)) return -1;
