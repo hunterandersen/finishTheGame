@@ -51,10 +51,18 @@ class HangManWord {
         return false;
     }
 
+    /**
+     * 
+     * @returns The winning word as a string, where the unknown letters are dashes
+     */
     getDisplayWord(){
         return this.knownLetters.join("");
     }
 
+    /**
+     * 
+     * @returns A number representing the number of guesses left before the player loses
+     */
     getRemainingAttempts(){
         return this.totalAttempts - this.attempts;
     }
