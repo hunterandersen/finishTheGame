@@ -74,4 +74,3 @@ console.log(hangmanTest.getDisplayWord());
 console.log(hangmanTest.testLetter("d"));
 hangmanTest.testLetter("E");
 console.log(hangmanTest.getDisplayWord());
-
